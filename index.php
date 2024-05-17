@@ -42,7 +42,7 @@
 
     <br>
     <br>
-    <a class="add" href="/tugas-5/inventory.php">Lihat Inventory</a>
+    <a class="add" href="/project-erp/inventory.php">Lihat Inventory</a>
     
     
 </body>
