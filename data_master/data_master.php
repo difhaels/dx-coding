@@ -26,7 +26,7 @@
             </div>
         </a>
 
-        <a href="./informasi_perusahaan.php">
+        <a href="./data_kelas.php">
             <div class="w-32 h-32 bg-blue-500 hover:bg-blue-400 flex justify-center items-center rounded-sm">
                 <div>
                     <svg class="w-10 h-10 mx-auto mb-2" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
