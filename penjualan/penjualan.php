@@ -7,7 +7,7 @@
 <body>
     <nav class="bg-slate-200 flex items-center justify-between py-3 px-3">
         <h1 class="text-2xl">Project ERP</h1>
-        <a  class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300" href="../core.php">back</a>
+        <a  class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300" href="../index.php">back</a>
     </nav>
 
     <div class="m-5 flex gap-3">

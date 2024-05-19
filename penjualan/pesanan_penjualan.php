@@ -10,7 +10,7 @@
 <body>
     <nav class="bg-slate-200 flex items-center justify-between py-3 px-3">
         <h1 class="text-2xl">Project ERP</h1>
-        <a  class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300" href="./data_master.php">back</a>
+        <a  class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300" href="./penjualan.php">back</a>
     </nav>
 
     <h1 class="text-xl font-semibold px-5 py-3">Pesanan Penjualan</h1>
