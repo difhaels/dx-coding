@@ -13,7 +13,7 @@
     <div class="m-5 flex gap-3">
 
         <a href="./informasi_perusahaan.php">
-            <div class="w-32 h-32 bg-blue-500 hover:bg-blue-400 flex justify-center items-center rounded-sm">
+            <div class="w-32 h-32 bg-red-500 hover:bg-red-400 flex justify-center items-center rounded-sm">
                 <div>
                     <svg class="w-10 h-10 mx-auto mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 20H21V10C21 8.89543 20.1046 8 19 8H15M11 16H11.01M17 16H17.01M7 16H7.01M11 12H11.01M17 12H17.01M7 12H7.01M11 8H11.01M7 8H7.01M15 20V6C15 4.89543 14.1046 4 13 4H5C3.89543 4 3 4.89543 3 6V20H15Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -24,7 +24,7 @@
         </a>
 
         <a href="./data_kelas.php">
-            <div class="w-32 h-32 bg-blue-500 hover:bg-blue-400 flex justify-center items-center rounded-sm">
+            <div class="w-32 h-32 bg-red-500 hover:bg-red-400 flex justify-center items-center rounded-sm">
                 <div>
                     <svg class="w-10 h-10 mx-auto mb-2" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.36066 4.98361H4.93443V7.86885H8.60656V9.44262H4.93443V13.1148H8.60656V14.6885H4.14754C3.71296 14.6885 3.36066 14.3362 3.36066 13.9016V4.98361Z" fill="#FFFFFF"/>
