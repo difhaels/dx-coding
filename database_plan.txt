@@ -1,0 +1,16 @@
+data master
+- informasi perusahaan = nama perusahaan, deskripsi perusahaan
+- data kelas = id kelas, nama kelas, stok, harga, pengajar
+
+penjualan
+- pesanan penjualan = id penjualan, nama pemesan, id kelas, nama kelas
+
+pembelian 
+- data pembelian = id pembelian, nama barang, jumlah barang, harga barang
+
+customer
+- data customer = id customer, nama customer, kelas diikuti, total pengeluaran
+
+pengajar 
+- data pengajar = id pengajar, nama pengajar, jumlah kelas, total customer
+
