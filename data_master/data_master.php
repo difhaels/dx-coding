@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Project ERP - Informasi Perusahaan</title>
-    <!-- Bootstrap CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Project ERP - Agung Saputra</title>
-    <!-- Bootstrap CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
