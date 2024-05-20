@@ -1,6 +1,6 @@
 <?php 
 // koneksi ke database
-$conn = mysqli_connect('localhost', 'root', '', 'so_agung');
+$conn = mysqli_connect('localhost', 'root', '', 'project_erp');
 
 function query($query) {
     global $conn;
