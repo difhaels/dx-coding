@@ -1,3 +1,5 @@
+<?php require '../functions.php'; $informasi_perusahaan = query("SELECT * FROM informasi_perusahaan"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +14,14 @@
 
     <div class="px-5 flex gap-5">
         <div class="w-full pr-5">
-            <h1 class="font-semibold pt-3">Nama Perusahaan</h1>
-            <h1>Dx Coding</h1>
-            <h1 class="font-semibold pt-3">Deskripsi Perusahaan</h1>
-            <h1>Perusahaan ini bertujuan untuk menyediakan layanan belajar bahasa pemrograman secara daring</h1>
-            <h1 class="font-semibold pt-3">Tanggal berdiri</h1>
-            <h1>05-17-2024</h1>
+            <?php foreach ($informasi_perusahaan as $informasi) : ?>
+                <h1 class="font-semibold pt-3">Nama Perusahaan</h1>
+                <h1><?= $informasi["nama_perusahaan"]?></h1>
+                <h1 class="font-semibold pt-3">Deskripsi Perusahaan</h1>
+                <h1><?= $informasi["deskripsi_perusahaan"]?></h1>
+                <h1 class="font-semibold pt-3">Tanggal berdiri</h1>
+                <h1><?= $informasi["tanggal_berdiri"]?></h1>
+            <?php endforeach; ?>
         </div>
         <div class="w-full pl-5">
             <h1 class="py-3 text-2xl font-semibold">Edit Informasi Perusahaan</h1>

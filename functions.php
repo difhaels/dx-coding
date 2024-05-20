@@ -2,6 +2,7 @@
 // koneksi ke database
 $conn = mysqli_connect('localhost', 'root', '', 'project_erp');
 
+// function untuk lihat data dari database
 function query($query) {
     global $conn;
 
