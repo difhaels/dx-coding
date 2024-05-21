@@ -1,4 +1,4 @@
-<?php  require '../functions.php'; $sales_order = query("SELECT * FROM sales_order"); ?>
+<?php  require '../functions.php'; $penjualan = query("SELECT * FROM penjualan"); ?>
 
 
 <!DOCTYPE html>
@@ -18,20 +18,20 @@
 
         <div class="px-5 flex justify-between bg-blue-400 text-white">
             <span class="w-[20%] py-2">No.</span>
-            <span class="w-[20%] py-2">Kode</span>
-            <span class="w-[20%] py-2">Nama Pemesan</span>
-            <span class="w-[20%] py-2">Nama Kelas</span>
+            <span class="w-[20%] py-2">Id Penjualan</span>
+            <span class="w-[20%] py-2">Pelanggan</span>
+            <span class="w-[20%] py-2">Kelas</span>
             <span class="w-[10%] py-2"></span>
         </div>
 
         <?php $i=1; ?>
-            <?php foreach ($sales_order as $row) : ?>
+            <?php foreach ($penjualan as $row) : ?>
             
             <div class="px-5 flex justify-between bg-blue-100">
                 <span class="w-[20%] py-2"> <?php echo $i; ?></span>
-                <span class="w-[20%] py-2"> <?php echo $row['kode']; ?> </span>
-                <span class="w-[20%] py-2"> <?php echo $row['nama_pemesan']; ?> </span>
-                <span class="w-[20%] py-2"> <?php echo $row['nama_kelas']; ?> </span>
+                <span class="w-[20%] py-2"> <?php echo $row['id_penjualan']; ?> </span>
+                <span class="w-[20%] py-2"> <?php echo $row['id_pelanggan']; ?> </span>
+                <span class="w-[20%] py-2"> <?php echo $row['id_kelas']; ?> </span>
                 <span class="w-[10%] py-2"> 
                     <a href="" class="px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-300">hapus</a>
                 </span>
