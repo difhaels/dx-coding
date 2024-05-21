@@ -58,7 +58,7 @@ $result = mysqli_query($conn, $query);
                 <span class="w-[20%] py-2"> <?php echo $row['harga']; ?> </span>
                 <span class="w-[20%] py-2"> <?php echo $row['nama_instruktor']; ?> </span>
                 <span class="w-[10%] py-2"> 
-                    <a href="" class="px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-300">hapus</a>
+                    <a href="../functions/hapus_kelas.php?id_kelas=<?php echo $row['id_kelas']; ?>" class="px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-300">hapus</a>
                 </span>
             </div>
             
