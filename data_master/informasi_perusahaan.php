@@ -1,4 +1,7 @@
-<?php require '../functions.php'; $informasi_perusahaan = query("SELECT * FROM informasi_perusahaan"); ?>
+<?php 
+    require '../functions.php'; 
+    $informasi_perusahaan = query("SELECT * FROM informasi_perusahaan"); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,13 +28,15 @@
         </div>
         <div class="w-full pl-5">
             <h1 class="py-3 text-2xl font-semibold">Edit Informasi Perusahaan</h1>
-            <h1 class="py-3">Nama Perusahaan</h1>
-            <input type="text" name="" placeholder="Nama Perusahaan Baru" size="30" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" autocomplete="off">
-            <h1 class="py-3">Deskripsi Perusahaan</h1>
-            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Deskripsi Perusahaan Baru"></textarea>
-            <div class="w-fit mt-3 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300">
-                <a href="../index.php">Submit</a>
-            </div>
+            <form action="../functions/update_informasi_perusahaan.php" method="post">
+                <h1 class="py-3">Nama Perusahaan</h1>
+                <input type="text" name="nama_perusahaan" placeholder="Nama Perusahaan Baru" size="30" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" autocomplete="off">
+                <h1 class="py-3">Deskripsi Perusahaan</h1>
+                <textarea name="deskripsi_perusahaan" id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Deskripsi Perusahaan Baru"></textarea>
+                <div class="w-fit mt-3 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
