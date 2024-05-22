@@ -83,5 +83,75 @@
 
     </div>
     
+    <div class=" m-3 mt-10 w-[40%]">
+        <h1 class="text-2xl font-semibold">Tambah Penjualan</h1>
+        <form action="../functions/tambah_penjualan.php" method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="id_pelanggan">
+                    Nama Pelanggan
+                </label>
+                <select name="id_pelanggan" id="id_pelanggan" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300">
+                    <?php
+                    // Ambil data pelanggan dari database
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project_erp";
+
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Koneksi gagal: " . mysqli_connect_error());
+                    }
+
+                    $result = mysqli_query($conn, "SELECT id_pelanggan, nama_pelanggan FROM pelanggan");
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<option value='{$row['id_pelanggan']}'>{$row['nama_pelanggan']}</option>";
+                    }
+
+                    mysqli_close($conn);
+                    ?>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="id_kelas">
+                    Nama Kelas
+                </label>
+                <select name="id_kelas" id="id_kelas" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300">
+                    <?php
+                    // Ambil data kelas dari database
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Koneksi gagal: " . mysqli_connect_error());
+                    }
+
+                    $result = mysqli_query($conn, "SELECT id_kelas, nama_kelas FROM kelas");
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<option value='{$row['id_kelas']}'>{$row['nama_kelas']}</option>";
+                    }
+
+                    mysqli_close($conn);
+                    ?>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="tanggal_pembelian">
+                    Tanggal Pembelian
+                </label>
+                <input type="date" name="tanggal_pembelian" id="tanggal_pembelian" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="harga">
+                    Harga
+                </label>
+                <input type="text" name="harga" id="harga" placeholder="Harga" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" required>
+            </div>
+            <div class="w-fit mt-3 bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300">
+                <button type="submit" class="px-2 py-1">Submit</button>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
