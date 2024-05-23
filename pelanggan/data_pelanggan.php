@@ -29,7 +29,7 @@
                 <span class="w-[20%] py-2"> <?php echo $i; ?></span>
                 <span class="w-[20%] py-2"> <?php echo $row['nama_pelanggan']; ?> </span>
                 <span class="w-[10%] py-2"> 
-                    <a href="" class="px-2 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-300">edit</a>
+                    <a href="../functions/edit_pelanggan.php?id=<?php echo $row['id_pelanggan']; ?>" class="px-2 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-300">edit</a>
                 </span>
             </div>
             
