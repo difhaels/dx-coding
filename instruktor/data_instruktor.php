@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project ERP - Pesanan Penjualan</title>
+    <title>Project ERP - Data Instruktor</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <a  class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300" href="../index.php">back</a>
     </nav>
 
-    <h1 class="text-xl font-semibold px-5 py-3">Pesanan Penjualan</h1>
+    <h1 class="text-xl font-semibold px-5 py-3">Data Instruktor</h1>
     <div class="mx-3">
 
         <div class="px-5 flex justify-between bg-blue-400 text-white">
@@ -33,7 +33,7 @@
                 <span class="w-[20%] py-2"> <?php echo $row['jumlah_kelas']; ?> </span>
                 <span class="w-[20%] py-2"> <?php echo $row['total_pelanggan']; ?> </span>
                 <span class="w-[10%] py-2"> 
-                    <a href="" class="px-2 py-1 bg-red-500 text-white rounded-lg hover:bg-red-300">hapus</a>
+                    <a href="../functions/edit_instruktor.php?id=<?php echo $row['id_instruktor']; ?>" class="px-2 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-300">edit</a>
                 </span>
             </div>
             
