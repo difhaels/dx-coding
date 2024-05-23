@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project ERP - Informasi Perusahaan</title>
+    <title>Project ERP - Data Master</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
