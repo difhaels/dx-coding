@@ -54,6 +54,22 @@ $result = mysqli_query($conn, $query);
             <?php endwhile; ?>
         </div>
     </div>
+    <div class="mx-3 mt-10">
+        <h1 class="text-2xl font-semibold mb-4">Tambah Pembelian</h1>
+        <form action="../functions/tambah_pembelian.php" method="POST" class="max-w-md">
+            <div class="mb-4">
+                <label for="nama_barang" class="block text-gray-700 text-sm font-bold mb-2">Nama Barang</label>
+                <input type="text" name="nama_barang" id="nama_barang" placeholder="Nama Barang" class="block w-full px-3 py-2 rounded-lg border border-gray-300" required>
+            </div>
+            <div class="mb-4">
+                <label for="harga" class="block text-gray-700 text-sm font-bold mb-2">Harga Barang</label>
+                <input type="number" name="harga" id="harga" placeholder="Harga Barang" class="block w-full px-3 py-2 rounded-lg border border-gray-300" required>
+            </div>
+            <div class="mt-6">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Submit</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
 
