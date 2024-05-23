@@ -12,7 +12,7 @@
 
     <div class="m-5 flex gap-3">
 
-        <a href="./informasi_perusahaan.php">
+        <a href="./daftar_pembelian.php">
             <div class="w-32 h-32 bg-red-500 hover:bg-red-400 flex justify-center items-center rounded-sm">
                 <div>
                 <svg fill="#FFFFFF" class="w-10 h-10 mx-auto mb-2" viewBox="0 0 16 16" id="request-approval-16px" xmlns="http://www.w3.org/2000/svg">
