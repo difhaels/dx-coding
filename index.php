@@ -9,7 +9,7 @@
         <h1 class="text-2xl py-3 px-3">Project ERP</h1>
     </nav>
 
-    <div class="m-5 flex gap-3">
+    <div class="m-5 flex flex-wrap gap-3">
 
         <a href="./data_master/data_master.php">
             <div class="w-32 h-32 bg-blue-500 hover:bg-blue-400 flex justify-center items-center rounded-sm">
