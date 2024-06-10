@@ -8,8 +8,9 @@ penjualan
 pembelian 
 - data pembelian = id pembelian, nama barang, jumlah barang, harga barang
 
-customer
-- data customer = id customer, nama customer, kelas diikuti, total pengeluaran
+customer == siswa
+- data customer = id customer, nama customer, kelas diikuti, total pengeluaran (ganti)
+- data siswa = id_siswa, username_siswa, password_siswa, kelas_diikuti(misal mobile_programming, pemrograman web), total_pengeluaran
 
 pengajar 
 - data pengajar = id pengajar, nama pengajar, jumlah kelas, total customer
