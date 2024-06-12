@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Siswa - Project ERP</title>
+    <title>Register Student - Project ERP</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
     <div class="flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
-            <h2 class="text-2xl font-semibold mb-6 text-center">Daftar Siswa</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-center">Register Student</h2>
             <form action="" method="POST">
                 <div class="mb-4">
                     <label for="username_siswa" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
