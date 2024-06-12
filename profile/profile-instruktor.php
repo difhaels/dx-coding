@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Profile Student</title>
+    <title>Profile Instruktor</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
