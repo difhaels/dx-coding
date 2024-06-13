@@ -20,8 +20,8 @@
                     <input type="password" name="password" id="password" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
                 </div>
                 <div class="text-center flex justify-between mb-4">
-                    <a href="" class="text-sm text-blue-500 hover:underline">Forgot Password</a>
-                    <a href="" class="text-sm text-blue-500 hover:underline">Create Account</a>
+                    <a href="../register/forgot-password.php" class="text-sm text-blue-500 hover:underline">Forgot Password</a>
+                    <a href="../register/register-student.php" class="text-sm text-blue-500 hover:underline">Create Account</a>
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Login</button>
                 <a href="./login-instructor.php">
