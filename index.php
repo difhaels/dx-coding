@@ -21,19 +21,19 @@
             </div>
         </div>
         <div  class="w-full">
-            <h1 class="text-2xl">All Class</h1>
+            <h1 class="text-2xl">New Class</h1>
             <div class="mt-5">
                 <div class="w-full">
-                    <div class="bg-red-500 h-24"></div>
+                    <div class="bg-purple-500 h-24"></div>
                     <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
                 </div>
             </div>
         </div>
         <div  class="w-full">
-            <h1 class="text-2xl">New</h1>
+            <h1 class="text-2xl">All</h1>
             <div class="mt-5">
                 <div class="w-full">
-                    <div class="bg-red-500 h-24"></div>
+                    <div class="bg-blue-500 h-24"></div>
                     <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
                 </div>
             </div>
