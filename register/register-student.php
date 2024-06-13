@@ -32,7 +32,7 @@
                     <input type="password_siswa" name="password_siswa" id="password_siswa" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Create Acc</button>
-                <a href="./home.php">
+                <a href="../index.php">
                     <h1  class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-center">Exit</h1>
                 </a>
             </form>
