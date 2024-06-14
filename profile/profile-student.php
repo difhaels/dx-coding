@@ -36,9 +36,9 @@
         <div class="flex justify-center mt-10 w-1/2">
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Course</h2>
-                <div class="flex flex-wrap justify-between">
+                <div class="flex flex-wrap justify-start items-center gap-3">
                     <a href="">
-                        <div class="w-52 bg-red-500 shadow-lg rounded-lg px-3 py-2 mb-3 text-white">
+                        <div class="w-52 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
                             <h1>Course dasar pemrograman</h1>
                         </div>
                     </a>
