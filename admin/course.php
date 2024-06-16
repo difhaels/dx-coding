@@ -14,10 +14,10 @@
             <a href="">
                 <div class=" hover:bg-slate-600 p-2">Course</div>
             </a>
-            <a href="">
+            <a href="./finance.php">
                 <div class=" hover:bg-slate-600 p-2">Finance</div>
             </a>
-            <a href="">
+            <a href="./about.php">
                 <div class=" hover:bg-slate-600 p-2">About</div>
             </a>
         </div>

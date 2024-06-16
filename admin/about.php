@@ -11,10 +11,10 @@
 
     <div class="flex">
         <div class="w-[10%] bg-slate-700 h-screen text-white">
-            <a href="">
+            <a href="./course.php">
                 <div class=" hover:bg-slate-600 p-2">Course</div>
             </a>
-            <a href="">
+            <a href="./finance.php">
                 <div class=" hover:bg-slate-600 p-2">Finance</div>
             </a>
             <a href="">
