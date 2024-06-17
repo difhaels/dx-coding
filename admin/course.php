@@ -29,6 +29,9 @@ if (!isset($_SESSION['admin_logged_in'])) {
             <a href="./about.php">
                 <div class=" hover:bg-slate-600 p-2">About</div>
             </a>
+            <a href="../index.php">
+                <div class=" hover:bg-slate-600 p-2">Exit</div>
+            </a>
         </div>
         
         <div>
