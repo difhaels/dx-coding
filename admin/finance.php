@@ -24,13 +24,13 @@ if (!isset($_SESSION['admin_logged_in'])) {
                 <div class=" hover:bg-slate-600 p-2">Course</div>
             </a>
             <a href="">
-                <div class=" hover:bg-slate-600 p-2">Finance</div>
+                <div class=" bg-yellow-500 p-2">Finance</div>
             </a>
             <a href="./about.php">
                 <div class=" hover:bg-slate-600 p-2">About</div>
             </a>
             <a href="../index.php">
-                <div class=" hover:bg-slate-600 p-2">Exit</div>
+                <div class="bg-red-500 hover:bg-red-400 p-2">Exit</div>
             </a>
         </div>
         
