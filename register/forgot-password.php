@@ -44,8 +44,5 @@
         </div>
     </div>
 
-    <footer class="fixed bottom-0 text-center bg-slate-900 text-white py-10 w-full">
-        <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
-    </footer>
 </body>
 </html>
