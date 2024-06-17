@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Profile Student</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/output.css">
 </head>
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">

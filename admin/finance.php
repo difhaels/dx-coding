@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Project ERP - Agung Saputra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/output.css">
 </head>
 <body>
     <nav class="bg-slate-200">

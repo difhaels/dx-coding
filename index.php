@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Dx Coding - Agung Saputra</title>
+    <link rel="stylesheet" href="./css/output.css">
 </head>
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
