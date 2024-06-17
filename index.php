@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Dx Coding - Agung Saputra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
