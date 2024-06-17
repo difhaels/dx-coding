@@ -1,3 +1,33 @@
+<?php
+session_start(); // Memulai sesi
+
+if (isset($_SESSION['admin_logged_in'])) {
+    header('Location: ../admin/finance.php'); // Mengarahkan ke dashboard jika sudah login
+    exit;
+}
+
+require '../connection.php'; // Menyertakan file koneksi database
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM admin WHERE username_admin = '$username' AND password_admin = '$password'";
+    $result = mysqli_query($conn, $query);
+    $admin = mysqli_fetch_assoc($result);
+
+    if ($admin) {
+        $_SESSION['admin_logged_in'] = true; // Menyimpan status login di sesi
+        header('Location: ../admin/finance.php'); // Mengarahkan ke dashboard
+        exit;
+    } else {
+        $error = 'Hmm Something Wrong';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +40,9 @@
     <div class="flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
             <h2 class="text-2xl font-semibold mb-6 text-center">Login Admin</h2>
+            <?php if ($error): ?>
+                <div class="mb-4 text-red-500"><?php echo $error; ?></div>
+            <?php endif; ?>
             <form action="" method="POST">
                 <div class="mb-4">
                     <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
@@ -21,7 +54,7 @@
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Login</button>
                 <a href="../index.php">
-                    <h1  class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-center">Exit</h1>
+                    <h1 class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-center">Exit</h1>
                 </a>
             </form>
         </div>
