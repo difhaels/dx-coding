@@ -10,7 +10,7 @@
         <a class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer" href="../index.php">Back</a>
     </nav>
 
-    <div class="flex justify-between items-start gap-10 mx-4">
+    <div class="flex justify-between items-start gap-10 mx-4 mb-20">
         <div class="flex justify-center mt-10 w-1/2">
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Profile Student</h2>
@@ -47,8 +47,7 @@
         </div>
     </div>
     
-
-    <footer class="fixed bottom-0 text-center bg-slate-900 text-white py-10 w-full">
+    <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
     </footer>
 </body>
