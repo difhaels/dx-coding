@@ -1,5 +1,5 @@
 <?php
-    require './functions/query.php';
+    include './functions/query.php';
     $courses = query("SELECT * FROM course");
 ?>
 <!DOCTYPE html>
