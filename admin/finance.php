@@ -10,7 +10,7 @@
     </nav>
 
     <div class="flex">
-        <div class="w-[10%] bg-slate-700 h-screen text-white">
+        <div class="w-[10%] bg-slate-700 h-[80vh] text-white">
             <a href="./course.php">
                 <div class=" hover:bg-slate-600 p-2">Course</div>
             </a>
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <footer class="fixed bottom-0 text-center bg-slate-900 text-white py-10 w-full">
+    <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
     </footer>
 </body>
