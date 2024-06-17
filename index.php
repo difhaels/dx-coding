@@ -10,32 +10,36 @@
         <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
     </nav>
 
-    <div class="flex justify-between gap-10 px-5 mt-5">
-        <div class="w-full">
-            <h1 class="text-2xl">Most Sales</h1>
-            <div class="mt-5">
-                <div class="w-full">
-                    <div class="bg-red-500 h-24"></div>
-                    <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
-                </div>
+    <div class=" px-5 mt-5">
+        <h1 class="text-2xl">New Class</h1>
+        <div class="flex flex-wrap justify-start items-center gap-10 mt-5">
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
             </div>
-        </div>
-        <div  class="w-full">
-            <h1 class="text-2xl">New Class</h1>
-            <div class="mt-5">
-                <div class="w-full">
-                    <div class="bg-purple-500 h-24"></div>
-                    <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
-                </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
             </div>
-        </div>
-        <div  class="w-full">
-            <h1 class="text-2xl">All</h1>
-            <div class="mt-5">
-                <div class="w-full">
-                    <div class="bg-blue-500 h-24"></div>
-                    <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
-                </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
+            </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
+            </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
+            </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
+            </div>
+            <div class="w-72">
+                <div class="bg-purple-500 h-24"></div>
+                <div class="bg-slate-200 px-3 py-2">Nama Kelas</div>
             </div>
         </div>
     </div>
