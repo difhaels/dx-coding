@@ -38,32 +38,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="bg-gray-100">
     <div class="flex items-center justify-center min-h-screen">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-[34rem]">
             <h2 class="text-2xl font-semibold mb-6 text-center">Register Student</h2>
             <form action="" method="POST">
-                <div class="mb-4">
-                    <label for="username_student" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-                    <input type="text" name="username_student" id="username_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-                </div>
-                <div class="mb-4">
-                    <label for="name_student" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" name="name_student" id="name_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-                </div>
-                <div class="mb-4">
-                    <label for="email_student" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input type="email" name="email_student" id="email_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-                </div>
-                <div class="mb-4">
-                    <label for="phone_student" class="block text-gray-700 text-sm font-bold mb-2">Phone</label>
-                    <input type="text" name="phone_student" id="phone_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-                </div>
-                <div class="mb-4">
-                    <label for="password_student" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input type="password" name="password_student" id="password_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-                </div>
-                <div class="mb-4">
-                    <label for="password_check" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
-                    <input type="password" name="password_check" id="password_check" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                <div class="flex justify-center gap-3">
+                    <div class="">
+                        <div class="mb-4">
+                            <label for="username_student" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                            <input type="text" name="username_student" id="username_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="name_student" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                            <input type="text" name="name_student" id="name_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email_student" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" name="email_student" id="email_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                    </div>
+    
+                    <div class="">
+                        <div class="mb-4">
+                            <label for="phone_student" class="block text-gray-700 text-sm font-bold mb-2">Phone</label>
+                            <input type="text" name="phone_student" id="phone_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div class="mb-4">
+                            <label for="password_student" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                            <input type="password" name="password_student" id="password_student" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password_check" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+                            <input type="password" name="password_check" id="password_check" class="block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Create Account</button>
                 <a href="../index.php">
