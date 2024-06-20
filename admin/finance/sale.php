@@ -33,7 +33,7 @@
         <a class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer" href="../finance.php">Back</a>    
     </nav>
 
-    <div class="px-5 mt-5">
+    <div class="px-5 mt-5 mb-16">
         <h1 class="text-2xl mb-4">Sales List</h1>
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white border border-gray-200">
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <footer class="fixed bottom-0 text-center bg-slate-900 text-white py-10 w-full">
+    <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
     </footer>
 </body>
