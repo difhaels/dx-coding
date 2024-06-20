@@ -20,21 +20,21 @@
                 <img class="w-full object-contain  rounded-xl" src="./banner.png" alt="banner">
                 <div class="absolute top-0 right-0 mt-3 mr-3">
                     <div class="flex gap-3">
-                        <a href="" class="w-24">
-                            <div class="bg-purple-500 h-10 rounded-t-lg"></div>
-                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg">Paket 1</div>
+                        <a href="" class="w-24 group:">
+                            <div class="bg-purple-500 h-10 rounded-t-lg group-hover:bg-purple-500"></div>
+                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg group-hover:bg-slate-400">Paket 1</div>
                         </a>
-                        <a href="" class="w-24">
-                            <div class="bg-purple-500 h-10 rounded-t-lg"></div>
-                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg">Paket 1</div>
+                        <a href="" class="w-24 group:">
+                            <div class="bg-purple-500 h-10 rounded-t-lg group-hover:bg-purple-500"></div>
+                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg group-hover:bg-slate-400">Paket 1</div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h1 class="text-2xl">Sort By</h1>
-        <div class="flex flex-wrap justify-start items-center gap-10 mt-5">
+        <h1 class="text-2xl mx-10">Sort By</h1>
+        <div class="flex flex-wrap justify-center items-center gap-10 mt-5">
             <?php foreach ($courses as $course) :?>               
                 <a href="" class="w-72 shadow-lg">
                     <div class="bg-purple-500 h-24"></div>
