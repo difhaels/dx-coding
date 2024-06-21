@@ -40,12 +40,11 @@ $student = query("SELECT * FROM student WHERE id_student = $student_id")[0];
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="<?= $student['email_student'] ?>" disabled>
                 </div>
-                <div class="mb-4">
+                <div class="mb-7">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" value="<?= $student['phone_student'] ?>" disabled>
                 </div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
-                <a href="logout.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Log Out</a>
+                <a href="logout-student.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Log Out</a>
                 <span class="mx-2">ID Student: <?= $student['id_student'] ?></span>
             </div>
         </div>

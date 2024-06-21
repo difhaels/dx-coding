@@ -15,7 +15,9 @@ $courses = query("SELECT * FROM course");
     <nav class="bg-slate-200 flex justify-between items-center px-5">
         <h1 class="text-2xl py-3">Dx Coding</h1>
         <?php if (isset($_SESSION['student_name'])): ?>
-            <span class="bg-green-400 px-3 py-1 rounded-lg"><?= $_SESSION['student_name'] ?></span>
+            <a href="./profile/profile-student.php">
+                <span class="bg-green-500 hover:bg-green-400 text-white px-3 py-1 rounded-lg"><?= $_SESSION['student_name'] ?></span>
+            </a>
         <?php else: ?>
             <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
         <?php endif; ?>    </nav>
