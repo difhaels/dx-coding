@@ -55,11 +55,11 @@ $courses = query("SELECT * FROM course");
                 $image = $category_images[$category] ?? 'default-image.jpg';
                 $bg_color = $category_bg_colors[$category] ?? 'bg-gray-500';
             ?>
-                <a href="" class="w-72 shadow-lg">
-                    <div class="<?= $bg_color ?> h-24 flex justify-center items-center">
+                <a href="" class="w-72">
+                    <div class="<?= $bg_color ?> h-24 flex justify-center items-center rounded-t-lg">
                         <img src="<?= $image ?>" alt="<?= $category ?>" class="h-16 w-16">
                     </div>
-                    <div class="bg-slate-200 px-3 py-2"><?= $course["name_course"] ?></div>
+                    <div class="bg-slate-200 px-3 py-2 rounded-b-lg shadow-lg"><?= $course["name_course"] ?></div>
                 </a>
             <?php endforeach; ?>
 
