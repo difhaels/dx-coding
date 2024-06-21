@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (!isset($_SESSION['student_id'])) {
+    header('Location: ../login/login-student.php');
+    exit();
+}
+
+require '../functions/query.php';
+
+// Dapatkan data siswa dari database
+$student_id = $_SESSION['student_id'];
+$student = query("SELECT * FROM student WHERE id_student = $student_id")[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,25 +26,27 @@
 
     <div class="flex justify-between items-start gap-10 mx-4 mb-20">
         <div class="flex justify-center mt-10 w-1/2">
-            <div class="bg-white shadow-lg rounded-lg p-6 w-full">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl">
                 <h2 class="text-2xl font-semibold mb-4">Profile Student</h2>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" value="student_username" disabled>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" value="<?= $student['username_student'] ?>" disabled>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" value="<?= $student['name_student'] ?>" disabled>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="student_email@example.com" disabled>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="<?= $student['email_student'] ?>" disabled>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" value="+62 812 3456 7890" disabled>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Address</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" rows="3" disabled>Jl. Example No. 123, Jakarta, Indonesia</textarea>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" value="<?= $student['phone_student'] ?>" disabled>
                 </div>
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
+                <a href="logout.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Log Out</a>
+                <span class="mx-2">ID Student: <?= $student['id_student'] ?></span>
             </div>
         </div>
         <div class="flex justify-center mt-10 w-1/2">
