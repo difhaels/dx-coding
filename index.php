@@ -1,4 +1,5 @@
 <?php
+session_start();
 include './functions/query.php';
 $courses = query("SELECT * FROM course");
 ?>
@@ -13,9 +14,11 @@ $courses = query("SELECT * FROM course");
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
         <h1 class="text-2xl py-3">Dx Coding</h1>
-        <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
-    </nav>
-
+        <?php if (isset($_SESSION['student_name'])): ?>
+            <span class="bg-green-400 px-3 py-1 rounded-lg"><?= $_SESSION['student_name'] ?></span>
+        <?php else: ?>
+            <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
+        <?php endif; ?>    </nav>
     <div class="px-5 mt-5 mb-16">
         <div class="flex justify-center items-center gap-5 mx-16 my-10">
             <div>

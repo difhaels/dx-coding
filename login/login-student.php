@@ -1,3 +1,29 @@
+<?php
+session_start();
+require '../functions/query.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Query untuk mendapatkan data student berdasarkan username
+    $student = query("SELECT * FROM student WHERE username_student = '$username'");
+
+    // Jika student ditemukan dan password cocok
+    if ($student && password_verify($password, $student[0]['password_student'])) {
+        // Set session
+        $_SESSION['student_id'] = $student[0]['id_student'];
+        $_SESSION['student_name'] = $student[0]['name_student'];
+
+        // Redirect ke dashboard
+        header('Location: ../index.php');
+        exit();
+    } else {
+        $error = 'Username or password not valid.';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +36,9 @@
     <div class="flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
             <h2 class="text-2xl font-semibold mb-6 text-center">Login Student</h2>
+            <?php if (isset($error)): ?>
+                <p class="text-red-500 text-center mb-4"><?= $error ?></p>
+            <?php endif; ?>
             <form action="" method="POST">
                 <div class="mb-4">
                     <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
