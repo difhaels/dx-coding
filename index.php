@@ -22,7 +22,7 @@ $courses = query("SELECT * FROM course");
             <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
         <?php endif; ?>    </nav>
     <div class="px-5 mt-5 mb-16">
-        <div class="flex justify-center items-center gap-5 mx-16 my-10">
+        <div class="flex justify-center items-center gap-5 mx-16 my-10 flex-wrap">
             <div>
                 <h1 class="text-4xl font-semibold">Build Your Career As</h1>
                 <h1 class="text-4xl font-semibold">A Professional Developer</h1>
