@@ -55,7 +55,7 @@ $courses = query("SELECT * FROM course");
                 $image = $category_images[$category] ?? 'default-image.jpg';
                 $bg_color = $category_bg_colors[$category] ?? 'bg-gray-500';
             ?>
-                <a href="" class="w-72">
+                <a href="" class="w-72 hover:-translate-y-1">
                     <div class="<?= $bg_color ?> h-24 flex justify-center items-center rounded-t-lg">
                         <img src="<?= $image ?>" alt="<?= $category ?>" class="h-16 w-16">
                     </div>
