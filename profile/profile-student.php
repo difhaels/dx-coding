@@ -10,6 +10,11 @@ require '../functions/query.php';
 // Dapatkan data siswa dari database
 $student_id = $_SESSION['student_id'];
 $student = query("SELECT * FROM student WHERE id_student = $student_id")[0];
+
+// Dapatkan data kursus yang telah dibeli siswa dari database
+$courses = query("SELECT course.name_course FROM sale 
+                JOIN course ON sale.course_sale = course.id_course 
+                WHERE sale.student_sale = $student_id");
 ?>
 
 <!DOCTYPE html>
@@ -52,11 +57,11 @@ $student = query("SELECT * FROM student WHERE id_student = $student_id")[0];
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Course</h2>
                 <div class="flex flex-wrap justify-start items-center gap-3">
-                    <a href="">
-                        <div class="w-52 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
-                            <h1>Course dasar pemrograman</h1>
-                        </div>
-                    </a>
+                    <?php foreach ($courses as $course): ?>
+                        <a href="" class="w-40 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
+                            <h1><?= $course['name_course'] ?></h1>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
