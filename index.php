@@ -17,21 +17,15 @@ $courses = query("SELECT * FROM course");
     </nav>
 
     <div class="px-5 mt-5 mb-16">
-        <div class="flex justify-center">
-            <div class="w-[80%] relative rounded-xl shadow-xl my-5">
-                <img class="w-full object-contain  rounded-xl" src="./banner.png" alt="banner">
-                <div class="absolute top-0 right-0 mt-3 mr-3">
-                    <div class="flex gap-3">
-                        <a href="" class="w-24 group:">
-                            <div class="bg-purple-500 h-10 rounded-t-lg group-hover:bg-purple-500"></div>
-                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg group-hover:bg-slate-400">Paket 1</div>
-                        </a>
-                        <a href="" class="w-24 group:">
-                            <div class="bg-purple-500 h-10 rounded-t-lg group-hover:bg-purple-500"></div>
-                            <div class="bg-slate-200 px-2 py-1 text-sm rounded-b-lg group-hover:bg-slate-400">Paket 1</div>
-                        </a>
-                    </div>
-                </div>
+        <div class="flex justify-center items-center gap-5 mx-16 my-10">
+            <div>
+                <h1 class="text-4xl font-semibold">Build Your Career As</h1>
+                <h1 class="text-4xl font-semibold">A Professional Developer</h1>
+                <h1 class="text-xl font-thin mt-2 mb-5">Start directed learning with learning path</h1>
+                <a href="" class="bg-slate-500 px-5 py-2 text-white rounded-lg shadow-lg hover:bg-slate-400">Learn Now</a>
+            </div>
+            <div>
+                <img class="w-[40rem]" src="./banner.png" alt="banner">
             </div>
         </div>
 
