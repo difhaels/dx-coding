@@ -4,7 +4,7 @@ include './functions/query.php';
 $courses = query("SELECT * FROM course");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <title>Dx Coding - Agung Saputra</title>
@@ -27,7 +27,7 @@ $courses = query("SELECT * FROM course");
                 <h1 class="text-4xl font-semibold">Build Your Career As</h1>
                 <h1 class="text-4xl font-semibold">A Professional Developer</h1>
                 <h1 class="text-xl font-thin mt-2 mb-5">Start directed learning with learning path</h1>
-                <a href="" class="bg-slate-500 px-5 py-2 text-white rounded-lg shadow-lg hover:bg-slate-400">Learn Now</a>
+                <a href="#courses" class="bg-slate-500 px-5 py-2 text-white rounded-lg shadow-lg hover:bg-slate-400">Learn Now</a>
             </div>
             <div>
                 <img class="w-[40rem]" src="./banner.png" alt="banner">
@@ -35,7 +35,7 @@ $courses = query("SELECT * FROM course");
         </div>
 
         <h1 class="text-2xl mx-10">Sort By</h1>
-        <div class="flex flex-wrap justify-center items-center gap-10 mt-5">
+        <div class="flex flex-wrap justify-center items-center gap-10 mt-5" id="courses">
             <?php
             $category_images = [
                 'Web Development' => './icon/web.svg',
@@ -67,7 +67,6 @@ $courses = query("SELECT * FROM course");
                     <div class="bg-slate-200 px-3 py-2 rounded-b-lg shadow-lg"><?= $course["name_course"] ?></div>
                 </a>
             <?php endforeach; ?>
-
         </div>
     </div>
 
