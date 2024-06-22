@@ -36,7 +36,7 @@ $categories = array_unique(array_column($courses, 'category_course'));
             </div>
         </div>
 
-        <div class="flex items-center mx-10 mb-7">
+        <div class="flex items-center mx-10 mb-7" id="courses">
             <h1 class="text-2xl md:ml-16 mr-3">Category</h1>
             <select id="categoryFilter" class="ml-4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <option value="all">All</option>
@@ -46,7 +46,7 @@ $categories = array_unique(array_column($courses, 'category_course'));
             </select>
         </div>
 
-        <div class="flex flex-wrap justify-center items-center gap-10 mt-5" id="courses">
+        <div class="flex flex-wrap justify-center items-center gap-10 mt-5">
             <?php
             $category_images = [
                 'Web Development' => './icon/web.svg',
