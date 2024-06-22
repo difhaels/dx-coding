@@ -71,7 +71,7 @@ $categories = array_unique(array_column($courses, 'category_course'));
                 $image = $category_images[$category] ?? 'default-image.jpg';
                 $bg_color = $category_bg_colors[$category] ?? 'bg-gray-500';
             ?>
-                <a href="" class="course-item w-72 hover:-translate-y-1" data-category="<?= $category ?>">
+                <a href="./transaction/course-detail.php" class="course-item w-72 hover:-translate-y-1" data-category="<?= $category ?>">
                     <div class="<?= $bg_color ?> h-24 flex justify-center items-center rounded-t-lg">
                         <img src="<?= $image ?>" alt="<?= $category ?>" class="h-16 w-16">
                     </div>
