@@ -2,6 +2,7 @@
 session_start();
 include './functions/query.php';
 $courses = query("SELECT * FROM course");
+$categories = array_unique(array_column($courses, 'category_course'));
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -20,7 +21,8 @@ $courses = query("SELECT * FROM course");
             </a>
         <?php else: ?>
             <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
-        <?php endif; ?>    </nav>
+        <?php endif; ?>    
+    </nav>
     <div class="px-5 mt-5 mb-16">
         <div class="flex justify-center items-center gap-5 mx-16 my-10 flex-wrap">
             <div>
@@ -34,7 +36,16 @@ $courses = query("SELECT * FROM course");
             </div>
         </div>
 
-        <h1 class="text-2xl mx-10">Sort By</h1>
+        <div class="flex items-center mx-10 mb-7">
+            <h1 class="text-2xl md:ml-16 mr-3">Category</h1>
+            <select id="categoryFilter" class="ml-4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <option value="all">All</option>
+                <?php foreach ($categories as $category): ?>
+                    <option value="<?= $category ?>"><?= $category ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
         <div class="flex flex-wrap justify-center items-center gap-10 mt-5" id="courses">
             <?php
             $category_images = [
@@ -60,7 +71,7 @@ $courses = query("SELECT * FROM course");
                 $image = $category_images[$category] ?? 'default-image.jpg';
                 $bg_color = $category_bg_colors[$category] ?? 'bg-gray-500';
             ?>
-                <a href="" class="w-72 hover:-translate-y-1">
+                <a href="" class="course-item w-72 hover:-translate-y-1" data-category="<?= $category ?>">
                     <div class="<?= $bg_color ?> h-24 flex justify-center items-center rounded-t-lg">
                         <img src="<?= $image ?>" alt="<?= $category ?>" class="h-16 w-16">
                     </div>
@@ -73,6 +84,21 @@ $courses = query("SELECT * FROM course");
     <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
     </footer>
+
+    <script>
+        document.getElementById('categoryFilter').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            var courseItems = document.querySelectorAll('.course-item');
+
+            courseItems.forEach(function(item) {
+                if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
