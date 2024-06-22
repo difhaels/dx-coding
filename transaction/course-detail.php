@@ -53,7 +53,9 @@ $course = $course[0];
             <div class="text-2xl font-bold text-green-500 mb-4">Rp <?= number_format($course['price_course'], 0, ',', '.') ?></div>
             
             <!-- Buy Course Button -->
-            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Buy Course</button>
+            <button class="mb-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Buy Course</button>
+            <a href="../index.php" class="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 text-center block">Back</a>
+
         </div>
     </div>
 </body>
