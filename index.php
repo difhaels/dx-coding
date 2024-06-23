@@ -23,7 +23,8 @@ $categories = array_unique(array_column($courses, 'category_course'));
             <a class="bg-blue-400 text-white px-3 py-1 rounded-lg hover:bg-blue-300 cursor-pointer" href="./login/login-student.php">Login</a>
         <?php endif; ?>    
     </nav>
-    <div class="px-5 mt-5 mb-16">
+
+    <div class="mx-10 mt-5 mb-16">
         <div class="flex justify-center items-center gap-5 mx-16 my-10 flex-wrap">
             <div>
                 <h1 class="text-4xl font-semibold">Build Your Career As</h1>
@@ -36,8 +37,8 @@ $categories = array_unique(array_column($courses, 'category_course'));
             </div>
         </div>
 
-        <div class="flex items-center mx-10 mb-7" id="courses">
-            <h1 class="text-2xl md:ml-16 mr-3">Category</h1>
+        <div class="flex items-center mb-7" id="courses">
+            <h1 class="text-2xl">Category</h1>
             <select id="categoryFilter" class="ml-4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <option value="all">All</option>
                 <?php foreach ($categories as $category): ?>
@@ -46,7 +47,7 @@ $categories = array_unique(array_column($courses, 'category_course'));
             </select>
         </div>
 
-        <div class="flex flex-wrap justify-center items-center gap-10 mt-5">
+        <div class="flex flex-wrap justify-center gap-7 md:gap-x-11 items-center mt-5">
             <?php
             $category_images = [
                 'Web Development' => './icon/web.svg',
