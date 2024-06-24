@@ -13,6 +13,14 @@ $instructor_id = $_SESSION['instructor_id'];
 
 // Dapatkan data instruktur dari database
 $instructor = query("SELECT * FROM instructor WHERE id_instructor = $instructor_id")[0];
+
+// Dapatkan semua kursus yang diinstruksikan oleh instruktur
+$courses = query("SELECT * FROM course WHERE instructor_course = $instructor_id");
+
+// Array warna background dan warna hover
+$background_colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500', 'bg-purple-500', 'bg-orange-500'];
+$hover_colors = ['hover:bg-red-400', 'hover:bg-blue-400', 'hover:bg-green-400', 'hover:bg-yellow-400', 'hover:bg-purple-400', 'hover:bg-orange-400'];
+
 ?>
 
 <!DOCTYPE html>
@@ -53,17 +61,23 @@ $instructor = query("SELECT * FROM instructor WHERE id_instructor = $instructor_
         <div class="flex justify-center mt-10 w-1/2">
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Course</h2>
-                <div class="flex flex-wrap justify-start items-center gap-3">
+                <div class="grid grid-cols-3 justify-start items-center gap-3">
                     <a href="">
-                        <div class="w-52 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
+                        <div class="w-52 bg-green-500 hover:bg-green-400 shadow-lg rounded-lg px-3 py-2 text-white">
                             <h1 class="font-bold text-xl text-center">+</h1>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="w-52 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
-                            <h1>Course dasar pemrograman</h1>
-                        </div>
-                    </a>
+                    <?php foreach ($courses as $index => $course) : ?>
+                        <?php
+                        $bg_color = $background_colors[$index % count($background_colors)];
+                        $hover_color = $hover_colors[$index % count($hover_colors)];
+                        ?>
+                        <a href="course_detail.php?id=<?= $course['id_course'] ?>">
+                            <div class="w-52 <?= $bg_color ?> shadow-lg rounded-lg px-3 py-2 text-white <?= $hover_color ?>">
+                                <h1><?= $course['name_course'] ?></h1>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
