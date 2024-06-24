@@ -19,10 +19,12 @@ $courses = query("SELECT course.name_course FROM sale
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Profile Student</title>
     <link rel="stylesheet" href="../css/output.css">
 </head>
+
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
         <h1 class="text-2xl py-3">Dx Coding</h1>
@@ -57,18 +59,42 @@ $courses = query("SELECT course.name_course FROM sale
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Course</h2>
                 <div class="flex flex-wrap justify-start items-center gap-3">
-                    <?php foreach ($courses as $course): ?>
-                        <a href="" class="w-40 bg-red-500 shadow-lg rounded-lg px-3 py-2 text-white">
+                    <?php
+                    $background_colors = [
+                        'bg-red-500',
+                        'bg-green-500',
+                        'bg-blue-500',
+                        'bg-yellow-500',
+                        'bg-purple-500',
+                        'bg-orange-500'
+                    ];
+                    $hover_colors = [
+                        'hover:bg-red-400',
+                        'hover:bg-green-400',
+                        'hover:bg-blue-400',
+                        'hover:bg-yellow-400',
+                        'hover:bg-purple-400',
+                        'hover:bg-orange-400'
+                    ];
+                    ?>
+                    <?php foreach ($courses as $index => $course) : ?>
+                        <?php
+                        $bg_color = $background_colors[$index % count($background_colors)];
+                        $hover_color = $hover_colors[$index % count($hover_colors)];
+                        ?>
+                        <a href="" class="w-40 <?= $bg_color ?> shadow-lg rounded-lg px-3 py-2 text-white <?= $hover_color ?>">
                             <h1><?= $course['name_course'] ?></h1>
                         </a>
                     <?php endforeach; ?>
+
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>Dibuat Agung Saputra dengan <span class="font-bold">php</span> dan <span class="font-bold">tailwind</span></h1>
     </footer>
 </body>
+
 </html>
