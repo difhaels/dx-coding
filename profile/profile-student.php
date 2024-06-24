@@ -12,9 +12,10 @@ $student_id = $_SESSION['student_id'];
 $student = query("SELECT * FROM student WHERE id_student = $student_id")[0];
 
 // Dapatkan data kursus yang telah dibeli siswa dari database
-$courses = query("SELECT course.name_course FROM sale 
+$courses = query("SELECT course.id_course, course.name_course FROM sale 
                 JOIN course ON sale.course_sale = course.id_course 
                 WHERE sale.student_sale = $student_id");
+
 ?>
 
 <!DOCTYPE html>
@@ -82,11 +83,10 @@ $courses = query("SELECT course.name_course FROM sale
                         $bg_color = $background_colors[$index % count($background_colors)];
                         $hover_color = $hover_colors[$index % count($hover_colors)];
                         ?>
-                        <a href="" class="w-40 <?= $bg_color ?> shadow-lg rounded-lg px-3 py-2 text-white <?= $hover_color ?>">
+                        <a href="../transaction/course-detail.php?id=<?= $course['id_course'] ?>" class="w-40 <?= $bg_color ?> shadow-lg rounded-lg px-3 py-2 text-white <?= $hover_color ?>">
                             <h1><?= $course['name_course'] ?></h1>
                         </a>
                     <?php endforeach; ?>
-
                 </div>
             </div>
         </div>
