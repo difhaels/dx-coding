@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['instructor_id'] = $instructor[0]['id_instructor'];
         $_SESSION['instructor_name'] = $instructor[0]['name_instructor'];
         // Redirect ke halaman dashboard instruktur atau halaman lain yang sesuai
-        header('Location: ../instructor/dashboard.php');
+        header('Location: ../profile/profile-instructor.php');
         exit();
     } else {
         $error_message = 'Username atau password salah!';
