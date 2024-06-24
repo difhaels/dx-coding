@@ -16,6 +16,17 @@ if (!$course) {
 
 // Ambil data course pertama (karena query akan mengembalikan array)
 $course = $course[0];
+
+// Cek apakah pengguna sudah login
+$isLoggedIn = isset($_SESSION['student_id']);
+$student_id = $isLoggedIn ? $_SESSION['student_id'] : null;
+
+// Cek apakah pengguna sudah membeli kursus ini
+$alreadyOwned = false;
+if ($isLoggedIn) {
+    $existingSale = query("SELECT * FROM sale WHERE student_sale = $student_id AND course_sale = $course_id");
+    $alreadyOwned = !empty($existingSale);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,9 +64,14 @@ $course = $course[0];
             <div class="text-2xl font-bold text-green-500 mb-4">Rp <?= number_format($course['price_course'], 0, ',', '.') ?></div>
             
             <!-- Buy Course Button -->
-            <button class="mb-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Buy Course</button>
+            <?php if ($alreadyOwned): ?>
+                <a href="../profile/profile-student.php" class="mb-2 w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 text-center block">Owned</a>
+            <?php elseif ($isLoggedIn): ?>
+                <a href="./transaction.php?course_id=<?= $course_id ?>" class="mb-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-center block">Buy Course</a>
+            <?php else: ?>
+                <a href="../login/login-student.php" class="mb-2 w-full bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-center block">Login to buy</a>
+            <?php endif; ?>
             <a href="../index.php" class="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 text-center block">Back</a>
-
         </div>
     </div>
 </body>
