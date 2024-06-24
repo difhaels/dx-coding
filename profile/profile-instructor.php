@@ -1,3 +1,20 @@
+<?php
+session_start();
+include '../functions/query.php';
+
+// Cek apakah instruktur sudah login
+if (!isset($_SESSION['instructor_id'])) {
+    header('Location: ../login/login-instructor.php');
+    exit();
+}
+
+// Dapatkan ID instruktur dari sesi
+$instructor_id = $_SESSION['instructor_id'];
+
+// Dapatkan data instruktur dari database
+$instructor = query("SELECT * FROM instructor WHERE id_instructor = $instructor_id")[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +33,21 @@
                 <h2 class="text-2xl font-semibold mb-4">Profile Instructor</h2>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" value="instructor_username" disabled>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" value="<?= $instructor['username_instructor'] ?>" disabled>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="instructor_email@example.com" disabled>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="<?= $instructor['email_instructor'] ?>" disabled>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" value="+62 812 3456 7890" disabled>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" value="<?= $instructor['phone_instructor'] ?>" disabled>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Address</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" rows="3" disabled>Jl. Example No. 123, Jakarta, Indonesia</textarea>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" rows="3" disabled><?= $instructor['address_instructor'] ?></textarea>
                 </div>
-                <a href="" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
+                <a href="edit-profile.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 ml-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
             </div>
         </div>
         <div class="flex justify-center mt-10 w-1/2">
