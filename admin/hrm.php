@@ -38,7 +38,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
         </div>
         
         <div>
-            <h1 class="m-5 text-xl">Course</h1>
+            <h1 class="m-5 text-xl">Human Resources Management</h1>
             <div class="m-5 flex flex-wrap gap-3">
                 <a href="">
                     <div class="w-32 h-32 bg-blue-500 hover:bg-blue-400 flex justify-center items-center rounded-lg">
