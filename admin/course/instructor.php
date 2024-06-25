@@ -29,6 +29,7 @@
                         <th class="px-4 py-2">Email</th>
                         <th class="px-4 py-2">Phone</th>
                         <th class="px-4 py-2">Address</th>
+                        <th class="px-4 py-2">Option</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,18 @@
                             <td class="border px-4 py-2"><?= $instructor["email_instructor"]; ?></td>
                             <td class="border px-4 py-2"><?= $instructor["phone_instructor"]; ?></td>
                             <td class="border px-4 py-2"><?= $instructor["address_instructor"]; ?></td>
+                            <td class="border px-4 py-2 grid grid-cols-1 gap-1">
+                                <a href="">
+                                    <div class="bg-slate-500 hover:bg-slate-400 shadow-lg rounded-lg px-2 py-1 text-white">
+                                        <h1 class="text-center">edit</h1>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="bg-red-500 hover:bg-red-400 shadow-lg rounded-lg px-2 py-1 text-white">
+                                        <h1 class="text-center">delete</h1>
+                                    </div>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
