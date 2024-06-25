@@ -20,11 +20,14 @@ if (!isset($_SESSION['admin_logged_in'])) {
 
     <div class="flex">
         <div class="w-[10%] bg-slate-700 h-[80vh] text-white">
-            <a href="./course.php">
-                <div class=" hover:bg-slate-600 p-2">Course</div>
+            <a href="./hrm.php">
+                <div class=" hover:bg-slate-600 p-2">HRM</div>
             </a>
-            <a href="./finance.php">
-                <div class="hover:bg-slate-600 p-2">Finance</div>
+            <a href="./sm.php">
+                <div class=" hover:bg-slate-600 p-2">SM</div>
+            </a>
+            <a href="./inventory.php">
+                <div class="hover:bg-slate-600 p-2">Inventory</div>
             </a>
             <a href="">
                 <div class="bg-yellow-500 p-2">About</div>
