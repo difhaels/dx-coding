@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_query($conn, $query);
 
     // Redirect ke dashboard instruktur
-    header('Location: dashboard.php');
+    header('Location: profile-instructor.php');
     exit();
 }
 ?>
