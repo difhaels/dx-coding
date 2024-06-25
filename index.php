@@ -14,7 +14,10 @@ $categories = array_unique(array_column($courses, 'category_course'));
 
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
-        <h1 class="text-2xl py-3">Dx Coding</h1>
+        <div class="flex items-center">
+            <img src="./dx.png" alt="dx" class="w-10">
+            <h1 class="text-2xl py-3">Coding</h1>
+        </div>
         <?php if (isset($_SESSION['student_name'])): ?>
             <a href="./profile/profile-student.php">
                 <span class="bg-green-500 hover:bg-green-400 text-white px-3 py-1 rounded-lg"><?= $_SESSION['student_name'] ?></span>
