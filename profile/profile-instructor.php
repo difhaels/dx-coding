@@ -62,7 +62,7 @@ $hover_colors = ['hover:bg-red-400', 'hover:bg-blue-400', 'hover:bg-green-400', 
             <div class="bg-white shadow-lg rounded-lg p-6 w-full">
                 <h2 class="text-2xl font-semibold mb-4">Course</h2>
                 <div class="grid grid-cols-3 justify-start items-center gap-3">
-                    <a href="">
+                    <a href="add-course.php">
                         <div class="w-52 bg-green-500 hover:bg-green-400 shadow-lg rounded-lg px-3 py-2 text-white">
                             <h1 class="font-bold text-xl text-center">+</h1>
                         </div>

@@ -84,7 +84,7 @@ $categories = array_unique(array_column($courses, 'category_course'));
 
     <footer class="text-center bg-slate-900 text-white py-10 w-full">
         <h1>©2024 agung saputra all rights reserved</h1>
-        <h1>source code <a href="https://github.com/difhaels/dx-coding.git" target="_blank" class="text-blue-800">here</a></h1>
+        <h1>source code <a href="https://github.com/difhaels/dx-coding.git" target="_blankx" class="text-blue-800">here</a></h1>
     </footer>
 
     <script>
