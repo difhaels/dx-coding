@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($admin) {
         $_SESSION['admin_logged_in'] = true; // Menyimpan status login di sesi
-        header('Location: ../admin/finance.php'); // Mengarahkan ke dashboard
+        header('Location: ../admin/sm.php'); // Mengarahkan ke dashboard
         exit;
     } else {
         $error = 'Hmm Something Wrong';
