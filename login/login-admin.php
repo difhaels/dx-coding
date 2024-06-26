@@ -2,7 +2,7 @@
 session_start(); // Memulai sesi
 
 if (isset($_SESSION['admin_logged_in'])) {
-    header('Location: ../admin/finance.php'); // Mengarahkan ke dashboard jika sudah login
+    header('Location: ../admin/sm.php'); // Mengarahkan ke dashboard jika sudah login
     exit;
 }
 
