@@ -31,7 +31,7 @@
 <body>
     <nav class="bg-slate-200 flex justify-between items-center px-5">
         <h1 class="text-2xl py-3">Dx Coding</h1>
-        <a class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer" href="../course.php">Back</a>    
+        <a class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-400 cursor-pointer" href="../sm.php">Back</a>    
     </nav>
 
     <div class="px-5 mt-5 mb-16">
