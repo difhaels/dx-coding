@@ -63,7 +63,7 @@
                                         <h1 class="text-center">edit</h1>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="delete_course.php?id_course=<?= $course["id_course"]; ?>">
                                     <div class="bg-red-500 hover:bg-red-400 shadow-lg rounded-lg px-2 py-1 text-white">
                                         <h1 class="text-center">delete</h1>
                                     </div>
