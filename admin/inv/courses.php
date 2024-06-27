@@ -58,7 +58,7 @@
                             <td class="border px-4 py-2"><?= $course["name_instructor"]; ?></td>
                             <td class="border px-4 py-2"><?= number_format($course["price_course"], 0, ',', '.'); ?></td>
                             <td class="border px-4 py-2 grid grid-cols-1 gap-1">
-                                <a href="">
+                                <a href="edit_course.php?id_course=<?= $course["id_course"]; ?>">
                                     <div class="bg-slate-500 hover:bg-slate-400 shadow-lg rounded-lg px-2 py-1 text-white">
                                         <h1 class="text-center">edit</h1>
                                     </div>
