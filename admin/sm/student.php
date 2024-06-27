@@ -60,7 +60,7 @@
                             <td class="border px-4 py-2"><?= $student["email_student"]; ?></td>
                             <td class="border px-4 py-2"><?= $student["phone_student"]; ?></td>
                             <td class="border px-4 py-2 grid grid-cols-1 gap-1">
-                                <a href="">
+                                <a href="edit_student.php?id_student=<?= $student["id_student"]; ?>">
                                     <div class="bg-slate-500 hover:bg-slate-400 shadow-lg rounded-lg px-2 py-1 text-white">
                                         <h1 class="text-center">edit</h1>
                                     </div>
