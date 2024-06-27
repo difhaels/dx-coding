@@ -749,6 +749,16 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -799,6 +809,10 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .box-border {
@@ -1222,6 +1236,10 @@ video {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .appearance-none {
@@ -2400,6 +2418,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3070,6 +3093,14 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .md\:w-\[85\%\] {
+    width: 85%;
+  }
+
   .md\:gap-x-11 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;

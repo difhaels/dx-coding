@@ -37,8 +37,19 @@ if (!isset($_SESSION['admin_logged_in'])) {
             </a>
         </div>
         
-        <div>
-            <h1 class="m-5 text-xl">About</h1>
+        <div class="m-5">
+            <h1 class="text-xl">About</h1>
+            <div class="mx-5 my-2 md:w-[85%]">
+                <h1 class="text-lg font-semibold">Visi</h1>
+                <h1>Menjadi platform terdepan dalam integrasi manajemen pembelajaran dan penjualan kursus yang memberikan pengalaman belajar yang dipersonalisasi dan interaktif bagi siswa serta kemudahan akses dan penggunaan bagi instruktur.</h1>
+                <h1 class="text-lg font-semibold mt-3">Misi</h1>
+                <ol class="list-decimal">
+                    <li>Mengembangkan dan memelihara platform ERP yang inovatif untuk memenuhi kebutuhan berbagai segmen pelanggan, termasuk siswa yang mencari peningkatan keterampilan, profesional yang ingin mengembangkan karier, dan institusi pendidikan yang mencari solusi pembelajaran tambahan.</li>
+                    <li>Menyediakan berbagai kursus berkualitas tinggi yang relevan dengan tuntutan pasar, serta memastikan layanan dukungan teknis dan pelanggan yang responsif dan berkualitas.</li>
+                    <li>Berkolaborasi dengan penyedia konten (instruktur), penyedia hosting, dan institusi pendidikan untuk menciptakan ekosistem pembelajaran yang berkelanjutan dan bermanfaat bagi pengguna.</li>
+                    <li>Terus melakukan pembaruan dan peningkatan fitur platform untuk meningkatkan pengalaman pengguna dan memenuhi harapan serta kebutuhan pelanggan dengan baik.</li>
+                </ol>
+            </div>
         </div>
     </div>
 
