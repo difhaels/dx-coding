@@ -73,50 +73,72 @@ $totalIncome = 0;
             </a>
         </div>
         
-        <div>
+        <div class="w-full bg-gray-100">
             <div>
-                <div class="w-60">
-                    <canvas id="pieChart"></canvas>
-                </div>
-                <script>
-                    // Dalam tag <script> pada halaman HTML Anda
-                    var ctx = document.getElementById('pieChart').getContext('2d');
+                <h1 class="m-5 text-xl">Sales Chart</h1>
+                <div class="flex items-center">
+                    <div>
+                        <div class="w-60">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                        <script>
+                            // Dalam tag <script> pada halaman HTML Anda
+                            var ctx = document.getElementById('pieChart').getContext('2d');
 
-                    var data = {
-                        labels: ['Income', 'Expenses'],
-                        datasets: [{
-                            label: 'Income vs Expenses',
-                            data: [<?= $totalPercentageIncome ?>, <?= $totalPercentageExpenses ?>],
-                            backgroundColor: [
-                                '#6BC16B', // Blue for Income
-                                '#D3524C'  // Red for Expenses
-                            ],
-                            borderWidth: 1
-                        }]
-                    };
+                            var data = {
+                                labels: ['Income', 'Expenses'],
+                                datasets: [{
+                                    label: 'Income vs Expenses',
+                                    data: [<?= $totalPercentageIncome ?>, <?= $totalPercentageExpenses ?>],
+                                    backgroundColor: [
+                                        'rgb(34 197 94)', // Blue for Income
+                                        'rgb(239 68 68)'  // Red for Expenses
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            };
 
-                    var options = {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'top',
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(tooltipItem) {
-                                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2) + '%';
+                            var options = {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        position: 'top',
+                                    },
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function(tooltipItem) {
+                                                return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2) + '%';
+                                            }
+                                        }
                                     }
                                 }
-                            }
-                        }
-                    };
+                            };
 
-                    var pieChart = new Chart(ctx, {
-                        type: 'pie',
-                        data: data,
-                        options: options
-                    });
-                </script>
+                            var pieChart = new Chart(ctx, {
+                                type: 'pie',
+                                data: data,
+                                options: options
+                            });
+                        </script>
+                    </div> 
+                    <div class="bg-white rounded-lg shadow-lg p-5 h-fit w-96 ml-10">
+                        <div class="bg-green-500 p-3 rounded-lg text-white mb-3">
+                            <h1>Income</h1>
+                            <?php $inc = number_format($totalIncome, 0, ',', '.')?>
+                            <h1>Rp. <?=$inc?></h1>
+                        </div>
+                        <div class="bg-red-500 p-3 rounded-lg text-white mb-3">
+                            <h1>Expenses</h1>
+                            <?php $exp = number_format($totalExpenses, 0, ',', '.')?>
+                            <h1>Rp. <?=$exp?></h1>
+                        </div>
+                        <div class="bg-sky-500 p-3 rounded-lg text-white">
+                            <h1>Remaining Income</h1>
+                            <?php $remai = number_format(($totalIncome-$totalExpenses), 0, ',', '.')?>
+                            <h1>Rp. <?=$remai?></h1>
+                        </div>
+                    </div>
+                </div>
             </div>
             <h1 class="m-5 text-xl">Sales Management</h1>
             <div class="m-5 flex flex-wrap gap-3">
@@ -139,7 +161,7 @@ $totalIncome = 0;
                 </a>
 
                 <a href="./sm/student.php">
-                    <div class="w-32 h-32 bg-green-500 hover:bg-green-400 flex justify-center items-center rounded-lg">
+                    <div class="w-32 h-32 bg-rose-500 hover:bg-rose-400 flex justify-center items-center rounded-lg">
                         <div>
                             <svg class="w-10 h-10 mx-auto mb-2" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M505.837,180.418L279.265,76.124c-7.349-3.385-15.177-5.093-23.265-5.093c-8.088,0-15.914,1.708-23.265,5.093 L6.163,180.418C2.418,182.149,0,185.922,0,190.045s2.418,7.896,6.163,9.627l226.572,104.294c7.349,3.385,15.177,5.101,23.265,5.101 c8.088,0,15.916-1.716,23.267-5.101l178.812-82.306v82.881c-7.096,0.8-12.63,6.84-12.63,14.138c0,6.359,4.208,11.864,10.206,13.618 l-12.092,79.791h55.676l-12.09-79.791c5.996-1.754,10.204-7.259,10.204-13.618c0-7.298-5.534-13.338-12.63-14.138v-95.148 l21.116-9.721c3.744-1.731,6.163-5.504,6.163-9.627S509.582,182.149,505.837,180.418z"></path> <path class="st0" d="M256,346.831c-11.246,0-22.143-2.391-32.386-7.104L112.793,288.71v101.638 c0,22.314,67.426,50.621,143.207,50.621c75.782,0,143.209-28.308,143.209-50.621V288.71l-110.827,51.017 C278.145,344.44,267.25,346.831,256,346.831z"></path> </g> </g></svg>
                             <div class="text-center">
