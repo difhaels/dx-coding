@@ -75,7 +75,7 @@ $totalIncome = 0;
         
         <div>
             <div>
-                <div style="width: 100%; margin: auto;">
+                <div class="w-60">
                     <canvas id="pieChart"></canvas>
                 </div>
                 <script>
@@ -88,8 +88,8 @@ $totalIncome = 0;
                             label: 'Income vs Expenses',
                             data: [<?= $totalPercentageIncome ?>, <?= $totalPercentageExpenses ?>],
                             backgroundColor: [
-                                'rgba(54, 162, 235, 0.8)', // Blue for Income
-                                'rgba(255, 99, 132, 0.8)'  // Red for Expenses
+                                '#6BC16B', // Blue for Income
+                                '#D3524C'  // Red for Expenses
                             ],
                             borderWidth: 1
                         }]
