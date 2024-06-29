@@ -5,6 +5,42 @@ if (!isset($_SESSION['admin_logged_in'])) {
     header('Location: ../login/login-admin.php'); 
     exit;
 }
+require '../functions/query.php';
+$totalIncome = 0;
+    $queryIncome = "SELECT SUM(price_course) AS total_income FROM sale
+                    JOIN course ON sale.course_sale = course.id_course";
+    $resultIncome = query($queryIncome);
+    if ($resultIncome) {
+        $totalIncome = $resultIncome[0]['total_income'];
+    }
+
+    // Step 2: Calculate Total Expenses
+    $totalExpenses = 0;
+
+    // Calculate salary expenses for instructors/partners
+    $queryInstructorCount = "SELECT COUNT(*) AS total_instructors FROM instructor";
+    $resultInstructorCount = query($queryInstructorCount);
+    $totalInstructors = $resultInstructorCount[0]['total_instructors'];
+    $totalSalaryInstructors = $totalInstructors * 350000;
+
+    // Calculate salary expenses for admins
+    $queryAdminCount = "SELECT COUNT(*) AS total_admins FROM admin";
+    $resultAdminCount = query($queryAdminCount);
+    $totalAdmins = $resultAdminCount[0]['total_admins'];
+    $totalSalaryAdmins = $totalAdmins * 550000;
+
+    // Calculate total expenses from items purchases
+    $queryTotalItemsExpenses = "SELECT SUM(amount) AS total_items_expenses FROM items";
+    $resultTotalItemsExpenses = query($queryTotalItemsExpenses);
+    $totalItemsExpenses = $resultTotalItemsExpenses[0]['total_items_expenses'];
+
+    // Summing up total expenses
+    $totalExpenses = $totalSalaryInstructors + $totalSalaryAdmins + $totalItemsExpenses;
+
+    // Step 3: Compare Total Income and Total Expenses
+    $totalRevenue = $totalIncome - $totalExpenses;
+    $totalPercentageIncome = ($totalIncome / ($totalIncome + $totalExpenses)) * 100;
+    $totalPercentageExpenses = ($totalExpenses / ($totalIncome + $totalExpenses)) * 100;
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +53,6 @@ if (!isset($_SESSION['admin_logged_in'])) {
     <nav class="bg-slate-200">
         <h1 class="text-2xl py-3 px-3">Dx Coding</h1>
     </nav>
-
     <div class="flex">
         <div class="w-[10%] bg-slate-700 h-[80vh] text-white">
             <a href="./hrm.php">
@@ -38,6 +73,9 @@ if (!isset($_SESSION['admin_logged_in'])) {
         </div>
         
         <div>
+            <div>
+                
+            </div>
             <h1 class="m-5 text-xl">Sales Management</h1>
             <div class="m-5 flex flex-wrap gap-3">
                 <a href="./sm/sale.php">
