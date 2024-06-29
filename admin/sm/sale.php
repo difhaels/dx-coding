@@ -158,7 +158,8 @@ $totalSales = getTotalSalesPrice();
                                 <td class="border px-4 py-2"><?= $sale["id_sale"]; ?></td>
                                 <td class="border px-4 py-2"><?= $sale["name_student"]; ?></td>
                                 <td class="border px-4 py-2"><?= $sale["name_course"]; ?></td>
-                                <td class="border px-4 py-2"><?= $sale["price_course"]; ?></td>
+                                <?php $pprice = number_format($sale["price_course"], 0, ',', '.')?>
+                                <td class="border px-4 py-2"><?= $pprice; ?></td>
                                 <td class="border px-4 py-2"><?= $sale["date_sale"]; ?></td>
                             </tr>
                         <?php endforeach ?>
