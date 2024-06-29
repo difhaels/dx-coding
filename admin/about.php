@@ -37,7 +37,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
             </a>
         </div>
         
-        <div class="m-5">
+        <div class="p-5 w-full">
             <h1 class="text-xl">About</h1>
             <div class="mx-5 my-2 md:w-[85%]">
                 <h1 class="text-lg font-semibold">Visi</h1>

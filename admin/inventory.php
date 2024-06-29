@@ -37,7 +37,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
             </a>
         </div>
         
-        <div>
+        <div class="bg-gray-100 w-full">
             <h1 class="m-5 text-xl">Inventory</h1>
             <div class="m-5 flex flex-wrap gap-3">
                 <a href="./inv/courses.php" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
