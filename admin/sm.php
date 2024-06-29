@@ -48,6 +48,7 @@ $totalIncome = 0;
 <head>
     <title>Project ERP - Agung Saputra</title>
     <link rel="stylesheet" href="../css/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav class="bg-slate-200">
@@ -74,7 +75,48 @@ $totalIncome = 0;
         
         <div>
             <div>
-                
+                <div style="width: 100%; margin: auto;">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <script>
+                    // Dalam tag <script> pada halaman HTML Anda
+                    var ctx = document.getElementById('pieChart').getContext('2d');
+
+                    var data = {
+                        labels: ['Income', 'Expenses'],
+                        datasets: [{
+                            label: 'Income vs Expenses',
+                            data: [<?= $totalPercentageIncome ?>, <?= $totalPercentageExpenses ?>],
+                            backgroundColor: [
+                                'rgba(54, 162, 235, 0.8)', // Blue for Income
+                                'rgba(255, 99, 132, 0.8)'  // Red for Expenses
+                            ],
+                            borderWidth: 1
+                        }]
+                    };
+
+                    var options = {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(tooltipItem) {
+                                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2) + '%';
+                                    }
+                                }
+                            }
+                        }
+                    };
+
+                    var pieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: data,
+                        options: options
+                    });
+                </script>
             </div>
             <h1 class="m-5 text-xl">Sales Management</h1>
             <div class="m-5 flex flex-wrap gap-3">
