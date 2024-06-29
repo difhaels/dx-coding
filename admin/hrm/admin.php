@@ -44,6 +44,7 @@ if (isset($_SESSION['error'])) {
                         <th class="px-4 py-2">ID</th>
                         <th class="px-4 py-2">Username</th>
                         <th class="px-4 py-2">Name</th>
+                        <th class="px-4 py-2">Option</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,6 +55,18 @@ if (isset($_SESSION['error'])) {
                             <td class="border px-4 py-2"><?= $admin["id_admin"]; ?></td>
                             <td class="border px-4 py-2"><?= $admin["username_admin"]; ?></td>
                             <td class="border px-4 py-2"><?= $admin["name_admin"]; ?></td>
+                            <td class="border px-4 py-2 grid grid-cols-1 gap-1">
+                                <a href="edit_admin.php?id_admin=<?= $admin["id_admin"]; ?>">
+                                    <div class="bg-slate-500 hover:bg-slate-400 shadow-lg rounded-lg px-2 py-1 text-white">
+                                        <h1 class="text-center">edit</h1>
+                                    </div>
+                                </a>
+                                <a href="delete_admin.php?id_admin=<?= $admin["id_admin"]; ?>" onclick="return confirm('Are you sure you want to delete this admin?');">
+                                    <div class="bg-red-500 hover:bg-red-400 shadow-lg rounded-lg px-2 py-1 text-white">
+                                        <h1 class="text-center">delete</h1>
+                                    </div>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
